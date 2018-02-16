@@ -1,17 +1,51 @@
-# Simple RSS to JSON service
+# rssjson [![Build Status](https://travis-ci.org/bukinoshita/rssjson.svg?branch=master)](https://travis-ci.org/bukinoshita/rssjson)
 
-## Run locally
+> RSS promise generator for Node
 
+
+## Install
+
+```bash
+$ yarn add rssjson
 ```
-node server.js
+
+
+## Usage
+
+```js
+const rssjson = require('rssjson')
+
+await rssjson('https://hipsters.tech/feed/podcast/')
+
+/*
+[{
+  title: 'Startups, investimentos e corretoras – Hipsters #70',
+  description: 'Algumas startups estão tentando resolver a vida financeira das pessoas! Vamos entender o que elas estão fazendo e como nesse episódio.',
+  link: 'https://hipsters.tech/startups-investimentos-e-corretoras-hipsters-70/',
+  url: 'https://hipsters.tech/startups-investimentos-e-corretoras-hipsters-70/',
+  created: 1510624922000,
+  enclosures: [{
+    url: 'https://media.blubrry.com/hipsterstech/content.blubrry.com/hipsterstech/hipsters_070_startups_corretoras.mp3',
+    length: '26568673',
+    type: 'audio/mpeg'
+  }]
+}, ...]
+*/
 ```
 
-## Request Usage
 
-e.g. http://localhost:8888/?url=https://rssfeedurl
+## API
+
+### rssjson(url)
+
+Returns a `promise`
+
+Type: `string`<br/>
+Required
+
+RSS url
 
 
-## Deploy to Heroku
+## License
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/jackysee/RssJson)
-
+MIT © [Bu Kinoshita](https://bukinoshita.io)
