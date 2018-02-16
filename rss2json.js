@@ -4,7 +4,6 @@ var express = require('express');
 var request = require('request');
 var app = express();
 var router = express.Router();
-var port = process.env.PORT || 8854;
 
 var parser = new require('xml2js').Parser({
     "explicitArray": false
@@ -69,5 +68,3 @@ router.get('/rss2json', function(req, res) {
 });
 
 app.use('/', router);
-app.listen(port);
-console.log('Listening on port ' + port);
