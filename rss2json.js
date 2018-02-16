@@ -4,7 +4,6 @@ var express = require('express');
 var request = require('request');
 var app = express();
 var router = express.Router();
-
 var parser = new require('xml2js').Parser({
     "explicitArray": false
 });
