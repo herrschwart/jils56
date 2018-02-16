@@ -1,17 +1,19 @@
 {
-  "name": "rss2json",
-  "version": "0.0.2",
-  "description": "RSS to JSON conversion Service",
-  "author": "kanishkkunal <kanishkkunal@gmail.com>",
-  "main": "f/main/index.js",
-  "dependencies": {
-    "rss-to-json": "^1.0.2"
+  "name": "RssJson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
-  "stdlib": {
-    "name": "kanishkkunal/rss2json",
-    "defaultFunction": "main",
-    "timeout": 10000,
-    "publish": true
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "2.76.0",
+    "xml2js": "0.4.17"
+  },
+  "engines": {
+    "node": "7.10.1"
   }
 }
